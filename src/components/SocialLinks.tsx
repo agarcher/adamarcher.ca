@@ -10,7 +10,7 @@ export default function SocialLinks() {
         <div className="mt-8 flex justify-center space-x-6">
           <a 
             href="https://github.com/agarcher" 
-            className="text-muted-foreground hover:text-foreground"
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -19,7 +19,7 @@ export default function SocialLinks() {
           </a>
           <a 
             href="https://www.linkedin.com/in/agarcher/" 
-            className="text-muted-foreground hover:text-foreground"
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +28,7 @@ export default function SocialLinks() {
           </a>
           <a 
             href="https://x.com/agarcher" 
-            className="text-muted-foreground hover:text-foreground"
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             target="_blank"
             rel="noopener noreferrer"
           >

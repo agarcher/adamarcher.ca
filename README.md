@@ -19,3 +19,7 @@ npm run build
 # Deploy to GitHub Pages
 npm run deploy
 ```
+
+Colour Palette
+
+https://coolors.co/ea7dff-010400-30332e-fffbfc-62bbc1

@@ -68,7 +68,7 @@ export default function ContactForm() {
             <Form.Label className="block text-sm font-medium text-foreground">Name</Form.Label>
             <Form.Control asChild>
               <input 
-                className="mt-1 block w-full rounded-md border border-input px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-primary bg-background dark:text-foreground disabled:opacity-50"
+                className="mt-1 block w-full rounded-md border border-accent-subtle px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-foreground bg-background dark:text-foreground disabled:opacity-50"
                 type="text" 
                 required 
                 disabled={isSubmitting}
@@ -84,7 +84,7 @@ export default function ContactForm() {
             <Form.Label className="block text-sm font-medium text-foreground">Email</Form.Label>
             <Form.Control asChild>
               <input 
-                className="mt-1 block w-full rounded-md border border-input px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-primary bg-background dark:text-foreground disabled:opacity-50"
+                className="mt-1 block w-full rounded-md border border-accent-subtle px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-foreground bg-background dark:text-foreground disabled:opacity-50"
                 type="email" 
                 required 
                 disabled={isSubmitting}
@@ -103,7 +103,7 @@ export default function ContactForm() {
             <Form.Label className="block text-sm font-medium text-foreground">Message</Form.Label>
             <Form.Control asChild>
               <textarea 
-                className="mt-1 block w-full rounded-md border border-input px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-primary bg-background dark:text-foreground disabled:opacity-50"
+                className="mt-1 block w-full rounded-md border border-accent-subtle px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-foreground bg-background dark:text-foreground disabled:opacity-50"
                 required 
                 rows={4}
                 disabled={isSubmitting}
