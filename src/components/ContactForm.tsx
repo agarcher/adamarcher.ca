@@ -3,17 +3,21 @@
 import React from 'react'
 import * as Form from '@radix-ui/react-form'
 import { EnvelopeClosedIcon } from '@radix-ui/react-icons'
+import emailjs from '@emailjs/browser'
 
 export default function ContactForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
-    console.log({
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message'),
+    emailjs.init({
+      publicKey: "AwrhVwge4tHWpXf2H",
+      blockHeadless: true,
     })
-    // Here you would typically send the form data to your server
+    emailjs.send("service_8f6ai5e","template_iuutzrd",{
+      from_name: formData.get('name'),
+      message: formData.get('message'),
+      from_email: formData.get('email'),
+    });
   }
 
   return (
