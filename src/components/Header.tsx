@@ -8,27 +8,10 @@ export default function Header() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <header className="shadow-sm">
+    <header>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-foreground">Adam Archer</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <a 
-              href="#about" 
-              className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium"
-            >
-              About
-            </a>
-            <a 
-              href="#contact" 
-              className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Contact
-            </a>
+        <div className="flex justify-end h-16">
+          <div className="flex items-center">
             <Toggle.Root
               pressed={theme === 'dark'}
               onPressedChange={(pressed: boolean) => setTheme(pressed ? 'dark' : 'light')}
