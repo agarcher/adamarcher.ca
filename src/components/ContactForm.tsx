@@ -17,7 +17,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div id="contact" className="bg-background py-16 px-4 sm:px-6 lg:px-8">
+    <div id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-lg mx-auto">
         <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl text-center mb-8">
           Contact Me
@@ -27,7 +27,7 @@ export default function ContactForm() {
             <Form.Label className="block text-sm font-medium text-foreground">Name</Form.Label>
             <Form.Control asChild>
               <input 
-                className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-1 block w-full rounded-md border border-input px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 type="text" 
                 required 
               />
@@ -40,7 +40,7 @@ export default function ContactForm() {
             <Form.Label className="block text-sm font-medium text-foreground">Email</Form.Label>
             <Form.Control asChild>
               <input 
-                className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-1 block w-full rounded-md border border-input px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 type="email" 
                 required 
               />
@@ -56,7 +56,7 @@ export default function ContactForm() {
             <Form.Label className="block text-sm font-medium text-foreground">Message</Form.Label>
             <Form.Control asChild>
               <textarea 
-                className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-1 block w-full rounded-md border border-input px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 required 
               />
             </Form.Control>

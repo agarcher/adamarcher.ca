@@ -2,13 +2,13 @@
 
 import * as Toggle from '@radix-ui/react-toggle'
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
-import { useTheme } from '../hooks/useTheme'
+import { useTheme } from '../hooks/useTheme.ts'
 
 export default function Header() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <header className="bg-background shadow-sm">
+    <header className="shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">

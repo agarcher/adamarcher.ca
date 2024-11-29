@@ -16,4 +16,22 @@
     --muted-foreground: 240 5% 64.9%;
     --primary: 0 0% 98%;
   }
+
+  #root {
+    background-image: url("/background-light.png");
+    background-repeat: repeat;
+  }
+
+  .dark #root {
+    background-image: url("/background-dark.png");
+  }
+
+  html,
+  body,
+  #root {
+    background-color: hsl(var(--background));
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
 }

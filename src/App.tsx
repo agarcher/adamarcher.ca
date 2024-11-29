@@ -10,16 +10,18 @@ import SocialLinks from './components/SocialLinks'
 function App() {
   return (
     <ThemeProvider>
-      <Header />
-      <div className="min-h-screen bg-background text-foreground">
-        <main>
-          <Hero />
-          <About />
-          <SocialLinks />
-          <ContactForm />
-        </main>
-        <Footer />
+      <div className="p-2">
+        <Header />
+        <div className="min-h-screen text-foreground">
+          <main>
+            <Hero />
+            <About />
+            <SocialLinks />
+            <ContactForm />
+          </main>
+        </div>
       </div>
+      <Footer />
     </ThemeProvider>
   )
 }
