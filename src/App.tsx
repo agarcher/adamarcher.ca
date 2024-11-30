@@ -11,10 +11,10 @@ import Section from './components/Section'
 function App() {
   return (
     <ThemeProvider>
-      <div>
+      <div className="min-h-screen flex flex-col">
         <Header />
-        <div className="text-foreground">
-          <main>
+        <div className="flex-1 text-foreground">
+          <main className="container mx-auto">
             <Section>
               <Hero />
             </Section>

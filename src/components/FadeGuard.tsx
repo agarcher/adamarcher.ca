@@ -2,9 +2,10 @@ import { useEffect, useRef } from 'react'
 
 interface FadeGuardProps {
   children: React.ReactNode
+  className?: string
 }
 
-export default function FadeGuard({ children }: FadeGuardProps) {
+export default function FadeGuard({ children, className = '' }: FadeGuardProps) {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function FadeGuard({ children }: FadeGuardProps) {
   return (
     <div 
       ref={containerRef}
-      className="relative"
+      className={`relative ${className}`}
       style={{
         '--gradient-position': '0px',
         WebkitMaskImage: 'linear-gradient(to bottom, transparent, transparent var(--gradient-position), black calc(var(--gradient-position) + 24px))',
