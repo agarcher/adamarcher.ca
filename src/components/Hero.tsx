@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react'
+import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
+import { XLogo } from './icons/XLogo'
 
 export default function Hero() {
   const nameRef = useRef<HTMLHeadingElement>(null)
@@ -6,14 +8,13 @@ export default function Hero() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Dispatch a custom event when visibility changes
         window.dispatchEvent(
           new CustomEvent('nameVisibility', {
             detail: { isVisible: entry.isIntersecting }
           })
         )
       },
-      { threshold: 0.5 } // Trigger when 50% visible/hidden
+      { threshold: 0.5 }
     )
 
     if (nameRef.current) {
@@ -39,6 +40,35 @@ export default function Hero() {
           <p className="mt-3 max-w-md mx-auto text-base text-muted-foreground sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             Bringing decades of experience from top tech companies to your next project.
           </p>
+          <div className="mt-8 flex justify-center space-x-6">
+            <a 
+              href="https://github.com/agarcher" 
+              className="p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="sr-only">GitHub</span>
+              <GitHubLogoIcon className="h-6 w-6" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/agarcher/" 
+              className="p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="sr-only">LinkedIn</span>
+              <LinkedInLogoIcon className="h-6 w-6" />
+            </a>
+            <a 
+              href="https://x.com/agarcher" 
+              className="p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="sr-only">X (formerly Twitter)</span>
+              <XLogo className="h-6 w-6" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
