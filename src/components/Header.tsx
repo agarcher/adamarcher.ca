@@ -51,7 +51,7 @@ export default function Header() {
               `}
             >
               {isHeroVisible ? (
-                <span className="text-foreground">Adam Archer</span>
+                <span className="px-2 py-1 text-foreground">Adam Archer</span>
               ) : (
                 <a href="#top" className="px-2 py-1 rounded-md text-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary">Adam Archer</a>
               )}
