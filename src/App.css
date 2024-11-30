@@ -4,27 +4,27 @@
 
 @layer base {
   :root {
-    --background: 345 100% 100%;
-    --background-card: 54 20% 95%;
-    --foreground: 105 100% 1%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --primary: 184 43% 57%;
-    --accent: 184 43% 57%;
-    --accent-foreground: 105 100% 1%;
-    --accent-subtle: 348 4% 79%;
-    --destructive: 0 84.2% 60.2%;
+    --background: 255, 255, 255;
+    --background-card: 255, 251, 247;
+    --foreground: 0, 3, 0;
+    --muted-foreground: 118, 118, 118;
+    --primary: 64, 191, 191;
+    --accent: 64, 191, 191;
+    --accent-foreground: 0, 3, 0;
+    --accent-subtle: 202, 202, 202;
+    --destructive: 255, 38, 38;
   }
 
   .dark {
-    --background: 105 100% 1%;
-    --background-card: 290 20% 6%;
-    --foreground: 345 100% 99%;
-    --muted-foreground: 240 5% 64.9%;
-    --primary: 184 43% 57%;
-    --accent: 184 43% 57%;
-    --accent-foreground: 105 100% 1%;
-    --accent-subtle: 96 5% 19%;
-    --destructive: 0 84.2% 60.2%;
+    --background: 0, 3, 0;
+    --background-card: 15, 15, 15;
+    --foreground: 255, 255, 255;
+    --muted-foreground: 165, 165, 165;
+    --primary: 64, 191, 191;
+    --accent: 64, 191, 191;
+    --accent-foreground: 0, 3, 0;
+    --accent-subtle: 48, 48, 48;
+    --destructive: 255, 38, 38;
   }
 
   #root {
@@ -40,7 +40,7 @@
   html,
   body,
   #root {
-    background-color: hsl(var(--background));
+    background-color: rgb(var(--background));
     min-height: 100vh;
     margin: 0;
     padding: 0;

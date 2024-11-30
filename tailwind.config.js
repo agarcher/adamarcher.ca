@@ -8,17 +8,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'hsl(var(--background))',
-        'background-card': 'hsl(var(--background-card))',
-        foreground: 'hsl(var(--foreground))',
-        'muted-foreground': 'hsl(var(--muted-foreground))',
-        primary: 'hsl(var(--primary))',
+        background: 'rgb(var(--background))',
+        'background-card': 'rgb(var(--background-card))',
+        foreground: 'rgb(var(--foreground))',
+        'muted-foreground': 'rgb(var(--muted-foreground))',
+        primary: 'rgb(var(--primary))',
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-          subtle: 'hsl(var(--accent-subtle))',
+          DEFAULT: 'rgb(var(--accent))',
+          foreground: 'rgb(var(--accent-foreground))',
+          subtle: 'rgb(var(--accent-subtle))',
         },
-        destructive: 'hsl(var(--destructive))',
+        destructive: 'rgb(var(--destructive))',
+      },
+      boxShadow: {
+        'highlight': '0px 0px 20px 10px rgba(0, 0, 0, 0.1)',
       },
     },
   },

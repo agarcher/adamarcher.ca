@@ -65,7 +65,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="sr-only">X (formerly Twitter)</span>
+              <span className="sr-only">X</span>
               <XLogo className="h-6 w-6" />
             </a>
           </div>
