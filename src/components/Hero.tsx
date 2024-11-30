@@ -26,7 +26,7 @@ export default function Hero() {
 
   return (
     <div>
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 
             ref={nameRef}

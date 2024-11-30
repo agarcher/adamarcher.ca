@@ -52,10 +52,10 @@ export default function ContactForm() {
   }
 
   return (
-    <div id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
+    <div className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-lg mx-auto">
         <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl text-center mb-8">
-          Contact Me
+          Contact
         </h2>
         {submitStatus === 'error' && (
           <div className="mb-6 p-4 rounded-md bg-destructive text-foreground">

@@ -33,14 +33,14 @@ function App() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <div className="flex-1 text-foreground">
-          <main className="container mx-auto">
-            <Section>
+          <main className="mx-auto">
+            <Section id="top">
               <Hero />
             </Section>
-            <Section>
+            <Section id="about">
               <About />
             </Section>
-            <Section className="last-section">
+            <Section id="contact" className="last-section">
               <ContactForm />
             </Section>
           </main>

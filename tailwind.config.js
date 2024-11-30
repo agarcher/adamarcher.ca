@@ -23,6 +23,9 @@ export default {
       boxShadow: {
         'highlight': '0px 0px 20px 10px rgba(0, 0, 0, 0.1)',
       },
+      screens: {
+        'xs': '480px',
+      },
     },
   },
   plugins: [],

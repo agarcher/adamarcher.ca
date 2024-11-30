@@ -1,9 +1,9 @@
 export default function About() {
   return (
     <div className="bg-muted py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
-          About Me
+          About
         </h2>
         <div className="mt-6 text-muted-foreground space-y-6">
           <p>
