@@ -6,8 +6,28 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Section from './components/Section'
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    const lastSection = document.querySelector('.last-section') as HTMLElement;
+    const footer = document.querySelector('.footer') as HTMLElement;
+
+    const handleScroll = () => {
+      if (lastSection && footer) {
+        const lastSectionRect = lastSection.getBoundingClientRect();
+        if (lastSectionRect.bottom <= window.innerHeight) {
+          footer.style.bottom = '0';
+        } else {
+          footer.style.bottom = '-64px';
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <ThemeProvider>
       <div className="min-h-screen flex flex-col">
@@ -20,7 +40,7 @@ function App() {
             <Section>
               <About />
             </Section>
-            <Section>
+            <Section className="last-section">
               <ContactForm />
             </Section>
           </main>

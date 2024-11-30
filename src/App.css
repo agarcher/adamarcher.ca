@@ -4,27 +4,27 @@
 
 @layer base {
   :root {
-    --background: 255, 255, 255;
-    --background-card: 255, 251, 247;
-    --foreground: 0, 3, 0;
-    --muted-foreground: 118, 118, 118;
-    --primary: 64, 191, 191;
-    --accent: 64, 191, 191;
-    --accent-foreground: 0, 3, 0;
-    --accent-subtle: 202, 202, 202;
-    --destructive: 255, 38, 38;
+    --background: 255 255 255;
+    --background-card: 255 251 247;
+    --foreground: 0 3 0;
+    --muted-foreground: 118 118 118;
+    --primary: 64 191 191;
+    --accent: 64 191 191;
+    --accent-foreground: 0 3 0;
+    --accent-subtle: 202 202 202;
+    --destructive: 255 38 38;
   }
 
   .dark {
-    --background: 0, 3, 0;
-    --background-card: 15, 15, 15;
-    --foreground: 255, 255, 255;
-    --muted-foreground: 165, 165, 165;
-    --primary: 64, 191, 191;
-    --accent: 64, 191, 191;
-    --accent-foreground: 0, 3, 0;
-    --accent-subtle: 48, 48, 48;
-    --destructive: 255, 38, 38;
+    --background: 0 3 0;
+    --background-card: 15 15 15;
+    --foreground: 255 255 255;
+    --muted-foreground: 165 165 165;
+    --primary: 64 191 191;
+    --accent: 64 191 191;
+    --accent-foreground: 0 3 0;
+    --accent-subtle: 48 48 48;
+    --destructive: 255 38 38;
   }
 
   #root {
@@ -55,4 +55,16 @@
   .dark .root-background {
     background-image: url("/background-dark.png");
   }
+}
+
+.footer {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.last-section {
+  padding: 2em 0;
 }
