@@ -16,7 +16,7 @@ export default function FadeGuard({ children, className = '' }: FadeGuardProps) 
     const updateGradient = () => {
       const rect = container.getBoundingClientRect()
       const headerHeight = 64 // Adjust this to match your header height
-      const gradientPosition = Math.max(headerHeight - rect.top, 0)
+      const gradientPosition = Math.max(headerHeight - rect.top, -headerHeight)
       container.style.setProperty('--gradient-position', `${gradientPosition}px`)
       
       rafId = requestAnimationFrame(updateGradient)
@@ -31,7 +31,7 @@ export default function FadeGuard({ children, className = '' }: FadeGuardProps) 
       ref={containerRef}
       className={`relative ${className}`}
       style={{
-        '--gradient-position': '0px',
+        '--gradient-position': '-64px',
         WebkitMaskImage: 'linear-gradient(to bottom, transparent, transparent var(--gradient-position), black calc(var(--gradient-position) + 24px))',
         maskImage: 'linear-gradient(to bottom, transparent, transparent var(--gradient-position), black calc(var(--gradient-position) + 24px))'
       } as React.CSSProperties}

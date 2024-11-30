@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --background: 345 100% 99%;
+    --background-card: 290 25% 95%;
     --foreground: 105 100% 1%;
     --muted-foreground: 240 3.8% 46.1%;
     --primary: 184 43% 57%;
@@ -16,6 +17,7 @@
 
   .dark {
     --background: 105 100% 1%;
+    --background-card: 290 20% 6%;
     --foreground: 345 100% 99%;
     --muted-foreground: 240 5% 64.9%;
     --primary: 184 43% 57%;

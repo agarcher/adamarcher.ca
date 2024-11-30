@@ -7,9 +7,9 @@ interface SectionProps {
 
 export default function Section({ children, className = '' }: SectionProps) {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-16">
+    <section className="min-h-screen flex items-center justify-center">
       <FadeGuard className="w-full max-w-3xl mx-auto">
-        <div className={`bg-background shadow-md p-6 ${className}`}>
+        <div className={`bg-background-card shadow-md p-6 ${className}`}>
           {children}
         </div>
       </FadeGuard>
