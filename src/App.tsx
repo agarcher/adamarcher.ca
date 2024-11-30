@@ -6,22 +6,31 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import SocialLinks from './components/SocialLinks'
+import Section from './components/Section'
 
 function App() {
   return (
     <ThemeProvider>
-      <div className="p-2">
+      <div>
         <Header />
-        <div className="min-h-screen text-foreground">
+        <div className="text-foreground">
           <main>
-            <Hero />
-            <About />
-            <SocialLinks />
-            <ContactForm />
+            <Section>
+              <Hero />
+            </Section>
+            <Section>
+              <About />
+            </Section>
+            <Section>
+              <SocialLinks />
+            </Section>
+            <Section>
+              <ContactForm />
+            </Section>
           </main>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </ThemeProvider>
   )
 }
