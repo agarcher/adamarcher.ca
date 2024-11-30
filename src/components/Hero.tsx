@@ -38,7 +38,7 @@ export default function Hero() {
             Freelance Software Engineer
           </p>
           <p className="mt-3 max-w-md mx-auto text-base text-muted-foreground sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Bringing decades of experience from top tech companies to your next project.
+            Bringing decades of experience to your next project.
           </p>
           <div className="mt-8 flex justify-center space-x-6">
             <a 
