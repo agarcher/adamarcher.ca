@@ -1,3 +1,5 @@
+import FadeGuard from './FadeGuard'
+
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
@@ -6,9 +8,11 @@ interface SectionProps {
 export default function Section({ children, className = '' }: SectionProps) {
   return (
     <section className="min-h-screen flex items-center justify-center p-4">
-      <div className={`max-w-2xl w-full bg-background shadow-md p-6 ${className}`}>
-        {children}
-      </div>
+      <FadeGuard>
+        <div className={`max-w-2xl w-full bg-background shadow-md p-6 ${className}`}>
+          {children}
+        </div>
+      </FadeGuard>
     </section>
   );
 } 

@@ -28,6 +28,7 @@
   #root {
     background-image: url("/background-light.png");
     background-repeat: repeat;
+    background-position-x: center;
   }
 
   .dark #root {
@@ -41,5 +42,15 @@
     min-height: 100vh;
     margin: 0;
     padding: 0;
+  }
+
+  .root-background {
+    background-image: url("/background-light.png");
+    background-repeat: repeat;
+    background-position-x: center;
+  }
+
+  .dark .root-background {
+    background-image: url("/background-dark.png");
   }
 }
