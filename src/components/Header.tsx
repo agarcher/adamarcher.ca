@@ -7,39 +7,78 @@ import { useRef, useEffect, useState } from 'react'
 
 export default function Header() {
   const { theme, setTheme } = useTheme()
-  const navRef = useRef<HTMLElement>(null)
+  const headerRef = useRef<HTMLElement>(null)
   const [isHeroVisible, setIsHeroVisible] = useState(true)
+  const [isOpaque, setIsOpaque] = useState(false)
 
   useEffect(() => {
     const handleNameVisibility = (event: CustomEvent<{ isVisible: boolean }>) => {
       setIsHeroVisible(event.detail.isVisible)
     }
 
-    // Add event listener for our custom event
     window.addEventListener('nameVisibility', handleNameVisibility as EventListener)
-
     return () => {
       window.removeEventListener('nameVisibility', handleNameVisibility as EventListener)
     }
   }, [])
 
   useEffect(() => {
-    const nav = navRef.current
-    if (!nav) return
+    const header = headerRef.current
+    if (!header) return
 
-    let rafId: number
-    const updatePosition = () => {
-      nav.style.backgroundPositionY = `${-window.scrollY}px`
-      rafId = requestAnimationFrame(updatePosition)
+    let intersectionObserver: IntersectionObserver
+
+    const setupObserver = () => {
+      const headerHeight = header.offsetHeight
+      
+      const hero = document.getElementById('hero')
+      const heroHeight = hero?.offsetHeight || 0
+
+      if (intersectionObserver) {
+        if (hero) {
+          intersectionObserver.unobserve(hero)
+        }
+      }
+
+      intersectionObserver = new IntersectionObserver(
+        ([entry]) => {
+          setIsOpaque(!entry.isIntersecting)
+        },
+        { 
+          threshold: 0,
+          rootMargin: `-${headerHeight + heroHeight + 48}px 0px 0px 0px`
+        }
+      )
+
+      if (hero) {
+        intersectionObserver.observe(hero)
+      }
     }
-    
-    rafId = requestAnimationFrame(updatePosition)
-    
-    return () => cancelAnimationFrame(rafId)
+
+    // Set up resize observer to handle header height changes
+    const resizeObserver = new ResizeObserver(() => {
+      setupObserver()
+    })
+
+    resizeObserver.observe(header)
+    setupObserver()
+
+    return () => {
+      const topSection = document.getElementById('top')
+      if (topSection) {
+        intersectionObserver.unobserve(topSection)
+      }
+      resizeObserver.disconnect()
+    }
   }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header
+      ref={headerRef}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 border-b ${
+        isOpaque ? 'bg-background border-accent-subtle' : 'bg-transparent border-transparent'
+      }`}
+    >
       <div className="max-w-3xl mx-auto px-8 sm:px-12 lg:px-16">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center overflow-hidden">
