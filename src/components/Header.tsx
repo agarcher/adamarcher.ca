@@ -75,7 +75,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 border-b ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 border-b ${
         isOpaque ? 'bg-background border-accent-subtle' : 'bg-transparent border-transparent'
       }`}
     >
@@ -90,17 +90,16 @@ export default function Header() {
               `}
             >
               {isHeroVisible ? (
-                <span className="px-2 py-1 text-foreground">Adam Archer</span>
+                <span className="px-2 py-1 text-foreground transition-colors duration-300">Adam Archer</span>
               ) : (
-                <a href="#top" className="px-2 py-1 rounded-md text-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary">Adam Archer</a>
+                <a href="#top" className="px-2 py-1 rounded-md text-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300">Adam Archer</a>
               )}
             </h1>
           </div>
           <div className="flex items-center space-x-4">
-            {/* Links for desktop screen sizes */}
             <nav className="hidden sm:flex space-x-4">
-              <a href="#about" className="px-2 py-1 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary">About</a>
-              <a href="#contact" className="px-2 py-1 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary">Contact</a>
+              <a href="#about" className="px-2 py-1 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300">About</a>
+              <a href="#contact" className="px-2 py-1 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300">Contact</a>
             </nav>
           </div>
         </div>
@@ -110,7 +109,7 @@ export default function Header() {
           pressed={theme === 'dark'}
           onPressedChange={(pressed: boolean) => setTheme(pressed ? 'dark' : 'light')}
           aria-label="Toggle dark mode"
-          className="p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+          className="p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300"
         >
           {theme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
         </Toggle.Root>

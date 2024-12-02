@@ -1,16 +1,16 @@
 export default function About() {
   return (
-    <div className="bg-muted py-16 px-4 sm:px-6 lg:px-8 relative">
+    <div className="bg-muted py-16 px-4 sm:px-6 lg:px-8 relative transition-colors duration-300">
       <div className="mx-auto">
-        <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl relative">
+        <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl relative transition-colors duration-300">
           About
           <img 
             src="/headshot.jpg" 
             alt="Adam Archer" 
-            className="xs:w-40 xs:h-40 w-32 h-32 rounded-full absolute top-0 right-0 transform -translate-y-3/4 border-1 border-accent-subtle"
+            className="xs:w-40 xs:h-40 w-32 h-32 rounded-full absolute top-0 right-0 transform -translate-y-3/4 border-1 border-accent-subtle transition-colors duration-300"
           />
         </h2>
-        <div className="mt-6 text-muted-foreground space-y-6">
+        <div className="mt-6 text-muted-foreground space-y-6 transition-colors duration-300">
           <p>
             With over a decade of experience in software engineering at leading tech companies, 
             I've honed my skills in developing scalable, efficient, and innovative solutions. 

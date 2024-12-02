@@ -30,9 +30,9 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col transition-colors duration-300">
         <Header />
-        <div className="flex-1 text-foreground">
+        <div className="flex-1 text-foreground transition-colors duration-300">
           <main className="mx-auto">
             <Section id="top">
               <Hero />
