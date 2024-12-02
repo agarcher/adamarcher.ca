@@ -79,7 +79,7 @@ export default function Header() {
         isOpaque ? 'bg-background border-accent-subtle' : 'bg-transparent border-transparent'
       }`}
     >
-      <div className="max-w-3xl mx-auto px-8 sm:px-12 lg:px-16">
+      <div className="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center overflow-hidden">
             <h1 
