@@ -28,7 +28,7 @@ function App() {
 
     setTimeout(() => {
       document.documentElement.classList.remove('no-transition')
-    }, 0)
+    }, 100)
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
