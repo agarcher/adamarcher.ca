@@ -1,9 +1,14 @@
 export default function About() {
   return (
-    <div className="bg-muted py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-muted py-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="mx-auto">
-        <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
+        <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl relative">
           About
+          <img 
+            src="/headshot.jpg" 
+            alt="Adam Archer" 
+            className="xs:w-40 xs:h-40 w-32 h-32 rounded-full absolute top-0 right-0 transform -translate-y-3/4 border-1 border-accent-subtle"
+          />
         </h2>
         <div className="mt-6 text-muted-foreground space-y-6">
           <p>
