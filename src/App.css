@@ -55,6 +55,10 @@
   .dark .root-background {
     background-image: url("/background-dark.png");
   }
+
+  .no-transition * {
+    transition: none !important;
+  }
 }
 
 .footer {

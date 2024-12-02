@@ -25,6 +25,11 @@ function App() {
     };
 
     window.addEventListener('scroll', handleScroll);
+
+    setTimeout(() => {
+      document.documentElement.classList.remove('no-transition')
+    }, 0)
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
