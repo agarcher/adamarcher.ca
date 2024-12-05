@@ -12,7 +12,7 @@ export default function About() {
         </h2>
         <div className="mt-6 text-muted-foreground space-y-6 transition-colors duration-300">
           <p className="font-bold">
-            Hi, I'm Adam, and I build software that works.
+            Hi, I'm Adam, and I build really good software.
           </p>
           <p>
             For decades, I've been turning ideas into reality as a software
@@ -21,28 +21,16 @@ export default function About() {
             scalable systems and delivering quality products.
           </p>
           <p>
-            At heart, I'm a creator. Whether it's designing systems from scratch
-            or refining the details that make a user's experience seamless, I
-            build products that are delightful to use and easy to maintain.
-            Recently, I channeled this passion into building an indie game with
-            a friend, blending creativity and technical expertise into a project
-            I'm proud to share.
+            At heart, I'm a builder. I produce products that are delightful to
+            use and easy to maintain. Whether creating a quick prototype or
+            architecting a system for scale, I will bring a pragmatic approach.
+            Freelancing allows me to collaborate on meaningful projects while
+            maintaining the flexibility to continue exploring personal
+            endeavors.
           </p>
           <p>
-            Freelancing allows me to collaborate on a wide variety of meaningful
-            projects while maintaining the flexibility to continue exploring
-            personal endeavors. I enjoy working with teams to solve unique
-            challenges, balancing speed and pragmatism with thoughtful
-            architectural decisions when needed.
-          </p>
-          <p>
-            My approach to software is about impact — crafting intuitive
-            designs, delivering strong user experiences, and building systems
-            tailored to the needs of the project. Whether it's shipping a
-            startup's MVP quickly and efficiently or designing for long-term
-            scalability, I bring a balanced, practical mindset to every
-            challenge. If you're looking for an experienced developer with a
-            user-centered approach, I'd love to connect.
+            If you're looking for an experienced developer with a user-centered
+            approach, I'd love to hear from you.
           </p>
         </div>
       </div>
