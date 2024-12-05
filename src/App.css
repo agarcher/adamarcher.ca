@@ -9,21 +9,21 @@
     --foreground: 0 3 0;
     --muted-foreground: 118 118 118;
     --primary: 64 191 191;
+    --primary-foreground: 3 3 3;
     --accent: 64 191 191;
-    --accent-foreground: 0 3 0;
     --accent-subtle: 202 202 202;
     --destructive: 255 38 38;
   }
 
   .dark {
-    --background: 0 3 0;
+    --background: 3 3 3;
     --background-card: 15 15 15;
     --foreground: 255 255 255;
     --muted-foreground: 165 165 165;
     --primary: 64 191 191;
+    --primary-foreground: 3 3 3;
     --accent: 64 191 191;
-    --accent-foreground: 0 3 0;
-    --accent-subtle: 30 30 30;
+    --accent-subtle: 45 45 45;
     --destructive: 255 38 38;
   }
 
@@ -44,16 +44,6 @@
     min-height: 100vh;
     margin: 0;
     padding: 0;
-  }
-
-  .root-background {
-    background-image: url("/background-light.png");
-    background-repeat: repeat;
-    background-position-x: center;
-  }
-
-  .dark .root-background {
-    background-image: url("/background-dark.png");
   }
 
   .no-transition * {
