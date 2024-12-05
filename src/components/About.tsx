@@ -22,7 +22,7 @@ export default function About() {
           </p>
           <p>
             At heart, I'm a builder. I produce products that are delightful to
-            use and easy to maintain. Whether creating a quick prototype or
+            use and easy to maintain. Whether prototyping an experiment or
             architecting a system for scale, I will bring a pragmatic approach.
             Freelancing allows me to collaborate on meaningful projects while
             maintaining the flexibility to continue exploring personal

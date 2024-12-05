@@ -1,36 +1,37 @@
-import './App.css'
-import { ThemeProvider } from './contexts/ThemeProvider'
-import About from './components/About'
-import ContactForm from './components/ContactForm'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Section from './components/Section'
-import { useEffect } from 'react';
+import "./App.css";
+import { ThemeProvider } from "./contexts/ThemeProvider";
+import About from "./components/About";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Section from "./components/Section";
+import Projects from "./components/Projects";
+import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    const lastSection = document.querySelector('.last-section') as HTMLElement;
-    const footer = document.querySelector('.footer') as HTMLElement;
+    const lastSection = document.querySelector(".last-section") as HTMLElement;
+    const footer = document.querySelector(".footer") as HTMLElement;
 
     const handleScroll = () => {
       if (lastSection && footer) {
         const lastSectionRect = lastSection.getBoundingClientRect();
         if (lastSectionRect.bottom <= window.innerHeight) {
-          footer.style.bottom = '0';
+          footer.style.bottom = "0";
         } else {
-          footer.style.bottom = '-64px';
+          footer.style.bottom = "-64px";
         }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     setTimeout(() => {
-      document.documentElement.classList.remove('no-transition')
-    }, 100)
+      document.documentElement.classList.remove("no-transition");
+    }, 100);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -45,6 +46,9 @@ function App() {
             <Section id="about">
               <About />
             </Section>
+            <Section id="projects">
+              <Projects />
+            </Section>
             <Section id="contact" className="last-section">
               <ContactForm />
             </Section>
@@ -53,7 +57,7 @@ function App() {
         <Footer />
       </div>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
