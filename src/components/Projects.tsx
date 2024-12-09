@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <div className="bg-background py-16 px-4 sm:px-6 lg:px-8 relative transition-colors duration-300">
+    <div className="py-16 px-4 sm:px-6 lg:px-8 relative transition-colors duration-300">
       <div className="mx-auto">
         <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl relative transition-colors duration-300">
           Projects
@@ -17,7 +17,7 @@ export default function Projects() {
               />
             </div>
             <div className="mt-4 text-muted-foreground space-y-4 transition-colors duration-300">
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                 <h3 className="text-xl font-bold text-foreground">
                   Super Block Boy & Friends
                 </h3>
