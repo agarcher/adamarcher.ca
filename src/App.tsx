@@ -1,5 +1,4 @@
 import "./App.css";
-import { ThemeProvider } from "./contexts/ThemeProvider";
 import About from "./components/About";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
@@ -35,28 +34,26 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <div className="min-h-screen flex flex-col transition-colors duration-300">
-        <Header />
-        <div className="flex-1 text-foreground transition-colors duration-300">
-          <main className="mx-auto">
-            <Section id="top">
-              <Hero />
-            </Section>
-            <Section id="about">
-              <About />
-            </Section>
-            <Section id="projects">
-              <Projects />
-            </Section>
-            <Section id="contact" className="last-section">
-              <ContactForm />
-            </Section>
-          </main>
-        </div>
-        <Footer />
+    <div className="min-h-screen flex flex-col transition-colors duration-300">
+      <Header />
+      <div className="flex-1 text-foreground transition-colors duration-300">
+        <main className="mx-auto">
+          <Section id="top">
+            <Hero />
+          </Section>
+          <Section id="about">
+            <About />
+          </Section>
+          <Section id="projects">
+            <Projects />
+          </Section>
+          <Section id="contact" className="last-section">
+            <ContactForm />
+          </Section>
+        </main>
       </div>
-    </ThemeProvider>
+      <Footer />
+    </div>
   );
 }
 
